@@ -1,0 +1,205 @@
+#login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom left, #170000, #012124);
+    transform: scale(0.9);
+    animation: 0.6s open forwards cubic-bezier(0.4, 0.0, 0.2, 1);
+
+
+    #myname {
+        color: rgb(86, 86, 86);
+        font-family: "Lato";
+        font-size: 9pt;
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        a{
+            color:rgb(86, 86, 86);
+        }
+    }
+}
+
+@keyframes open {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+#login-container {
+    width: 70vw;
+    max-width: 300px;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+
+    margin: auto;
+    //     background:#59595914;
+
+    .ticker {
+        position: fixed;
+        top: 0;
+        padding: 0px 0px;
+        width: 100%;
+        background: linear-gradient(to right, #520101c2, #00006dc4);
+        font-family: "Merienda One";
+
+        text-shadow: -2px -2px 8px #ffffff3d;
+        opacity: 0;
+        display: flex;
+        color: #ffffffb3;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        position: relative;
+        width: 100%;
+
+        p {
+            width: 100%;
+            text-align: center;
+
+            &#buttons-group {
+
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+            }
+
+            span {
+                font-family: "Merienda One";
+                color: white;
+                font-size: 36pt;
+                margin: 0;
+                background: linear-gradient(to bottom, #f1f1f1, #6d4ef6);
+                -webkit-text-fill-color: #ffffff00;
+                -webkit-background-clip: text;
+                text-shadow: -2px -2px 8px #ffffff3d;
+
+                display: block;
+            }
+
+
+            &#error-label {
+                position: absolute;
+                //                 bottom:0;
+                color: #ff000099;
+                font-family: "Lato";
+            }
+        }
+
+        #spinner {
+            position: absolute;
+            font-family: "Merienda One";
+            color: white;
+            font-size: 36pt;
+            margin: 0;
+            text-align: center;
+            width: 100%;
+            background: linear-gradient(to right, #f1f1f1, #6d4ef6);
+            -webkit-text-fill-color: #ffffff00;
+            -webkit-background-clip: text;
+            text-shadow: -2px -2px 8px #ffffff3d;
+
+            font-size: 12px;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px white inset !important;
+        }
+
+        input {
+            width: 80%;
+            padding: 16px 25px;
+            border-radius: 100px;
+            border: none;
+            font-family: "Lato";
+            background: #38383852;
+            color: white;
+            box-shadow: -2px -2px 8px #4e4e4e21,
+                3px 3px 5px #00000066;
+            outline: none;
+            margin: 5px 0;
+            transition: 0.4s all cubic-bezier(0.4, 0.0, 0.2, 1);
+
+            &:-webkit-autofill {
+                background-color: #38383852 !important;
+                -webkit-text-fill-color: 38383852 !important;
+
+            }
+
+            &:-webkit-autofill-selected {
+                background-color: #38383852 !important;
+                -webkit-text-fill-color: 38383852 !important;
+
+            }
+
+            &[disabled] {
+                background: #25252552;
+                color: #535353;
+                box-shadow: -2px -2px 8px #4e4e4e12,
+
+            }
+        }
+
+        #submit-button,
+        #register-button {
+            background: #299c2929;
+            color: #ffffff9e;
+            padding: 14px 35px;
+            font-family: "Lato";
+            font-size: 15px;
+            outline: none;
+            border-radius: 100px;
+            //         margin: 0 5px;
+            border: none;
+            text-align: center;
+            opacity: .5;
+            box-shadow: -2px -2px 8px #0000004f, 3px 3px 5px #0000005c;
+            width: 45%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-indent: 7px;
+            transition: 0.4s all cubic-bezier(0.4, 0.0, 0.2, 1);
+
+
+            &[disabled] {
+                background: #25252552;
+                color: #535353;
+                box-shadow: -2px -2px 8px #4e4e4e12,
+
+            }
+
+            &:active {
+                background: #3c3c3c;
+            }
+
+
+        }
+
+        #register-button {
+            background: #d7753a17;
+
+        }
+    }
+}

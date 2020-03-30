@@ -1,0 +1,24 @@
+#user-preferences{
+    position: absolute;
+    width:100vw;
+    height:100vh;
+    display:block;
+    background:#000000cc;
+    backdrop-filter:blur(1px);
+    z-index:2;
+//     display:none;
+    pointer-events: none;
+
+    button{
+        border:none;
+        background:linear-gradient(to right, #555555, #3a3a3a);
+        padding:10px 20px;
+        color:#ffffff91;
+        font-size:18px;
+        font-family:"Lato";
+        border-radius:10px;
+        margin:10px;
+        float:right;
+        vertical-align:bottom;
+    }
+}

@@ -1,0 +1,40 @@
+strict digraph "dependency-cruiser output"{
+    ordering="out" rankdir="LR" splines="true" overlap="false" nodesep="0.16" ranksep="0.18" fontname="Helvetica-bold" fontsize="9" style="rounded,bold,filled" fillcolor="#ffffff" compound="true"
+    node [shape="box" style="rounded, filled" height="0.2" color="black" fillcolor="#ffffcc" fontcolor="black" fontname="Helvetica" fontsize="9"]
+    edge [arrowhead="normal" arrowsize="0.6" penwidth="2.0" color="#00000033" fontname="Helvetica" fontsize="9"]
+
+    subgraph "cluster_src" {label="src" "src/Albums.jsx" [label="Albums.jsx" URL="src/Albums.jsx" fillcolor="#ffff77"] }
+    subgraph "cluster_src" {label="src" "src/AllTracks.jsx" [label="AllTracks.jsx" URL="src/AllTracks.jsx" fillcolor="#ffff77"] }
+    subgraph "cluster_src" {label="src" "src/App.jsx" [label="App.jsx" URL="src/App.jsx" fillcolor="#ffff77"] }
+    "src/App.jsx" -> "src/App.scss"
+    "src/App.jsx" -> "src/HomePage.jsx"
+    "src/App.jsx" -> "src/Library.jsx"
+    "src/App.jsx" -> "src/MainBody.jsx"
+    "src/App.jsx" -> "src/Navigation.jsx"
+    "src/App.jsx" -> "src/Player.jsx"
+    "src/App.jsx" -> "src/Settings.jsx"
+    subgraph "cluster_src" {label="src" "src/App.scss" [label="App.scss" URL="src/App.scss" ] }
+    subgraph "cluster_src" {label="src" "src/Favourites.jsx" [label="Favourites.jsx" URL="src/Favourites.jsx" fillcolor="#ffff77"] }
+    subgraph "cluster_src" {label="src" "src/FrequentlyPlayed.jsx" [label="FrequentlyPlayed.jsx" URL="src/FrequentlyPlayed.jsx" fillcolor="#ffff77"] }
+    "src/FrequentlyPlayed.jsx" -> "src/components/Tracklist.scss"
+    "src/FrequentlyPlayed.jsx" -> "src/MainContext.jsx"
+    subgraph "cluster_src" {label="src" "src/HomePage.jsx" [label="HomePage.jsx" URL="src/HomePage.jsx" fillcolor="#ffff77"] }
+    "src/HomePage.jsx" -> "src/FrequentlyPlayed.jsx"
+    "src/HomePage.jsx" -> "src/Library.jsx"
+    "src/HomePage.jsx" -> "src/MainContext.jsx"
+    subgraph "cluster_src" {label="src" "src/Library.jsx" [label="Library.jsx" URL="src/Library.jsx" fillcolor="#ffff77"] }
+    "src/Library.jsx" -> "src/Albums.jsx"
+    "src/Library.jsx" -> "src/AllTracks.jsx"
+    "src/Library.jsx" -> "src/components/Tracklist.scss"
+    "src/Library.jsx" -> "src/Favourites.jsx"
+    subgraph "cluster_src" {label="src" "src/MainBody.jsx" [label="MainBody.jsx" URL="src/MainBody.jsx" fillcolor="#ffff77"] }
+    subgraph "cluster_src" {label="src" "src/MainContext.jsx" [label="MainContext.jsx" URL="src/MainContext.jsx" fillcolor="#ffff77"] }
+    subgraph "cluster_src" {label="src" "src/Navigation.jsx" [label="Navigation.jsx" URL="src/Navigation.jsx" fillcolor="#ffff77"] }
+    subgraph "cluster_src" {label="src" "src/Player.jsx" [label="Player.jsx" URL="src/Player.jsx" fillcolor="#ffff77"] }
+    subgraph "cluster_src" {label="src" "src/Settings.jsx" [label="Settings.jsx" URL="src/Settings.jsx" fillcolor="#ffff77"] }
+    subgraph "cluster_src" {label="src" subgraph "cluster_src/components" {label="components" "src/components/Tracklist.scss" [label="Tracklist.scss" URL="src/components/Tracklist.scss" ] } }
+    subgraph "cluster_src" {label="src" "src/index.jsx" [label="index.jsx" URL="src/index.jsx" fillcolor="#ffff77"] }
+    "src/index.jsx" -> "src/App.jsx"
+    "src/index.jsx" -> "src/serviceWorker.js"
+    subgraph "cluster_src" {label="src" "src/serviceWorker.js" [label="serviceWorker.js" URL="src/serviceWorker.js" ] }
+}

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "music-f9f22"
+  },
+  "targets": {
+    "music-f9f22": {
+      "hosting": {
+        "not-spotify": [
+          "music-f9f22"
+        ]
+      }
+    }
+  }
+}

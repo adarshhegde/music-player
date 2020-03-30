@@ -1,0 +1,39 @@
+{
+  "short_name": "Not Spotify",
+  "name": "Not Spotify",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0f0f0f",
+  "background_color": "#0f0f0f",
+  "share_target": {
+    "action": "/addtrack/",
+    "method": "GET",
+    "enctype":"application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+,
+  "orientation": "portrait",
+  "Scope": "/",
+  "splash_pages": null
+}
